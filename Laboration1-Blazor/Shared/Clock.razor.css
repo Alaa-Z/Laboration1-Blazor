@@ -1,0 +1,64 @@
+﻿.clock-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.clock {
+    width: 200px;
+    height: 200px;
+    padding: 2rem;
+    background-image: url(../analog-clock.png);
+    background-size: cover;
+    background-position: center center;
+    border: 1px solid #fca311;
+    border-radius: 50%;
+    position: relative;
+}
+
+.hour-hand {
+    background: #fca311;
+    position: absolute;
+    border-radius: 8px;
+    transform-origin: bottom;
+    height: 25%;
+    top: 25%;
+    left: 48.85%;
+    width: 2%;
+    z-index: 3;
+}
+
+.min-hand {
+    z-index: 10;
+    width: 40%;
+    height: 4px;
+    background: #fca311;
+    position: absolute;
+    border-radius: 12px;
+    transform-origin: bottom;
+    left: 48.9%;
+    opacity: 0.8;
+    width: 1.6%;
+    height: 32%;
+    top: 18%;
+}
+
+.second-hand {
+    position: absolute;
+    background: black;
+    border-radius: 10px;
+    transform-origin: bottom;
+    top: 14%;
+    left: 50%;
+    width: 1%;
+    height: 36%;
+}
+
+ol {
+    padding-left: 20px;
+}
+
+    ol li {
+        border-bottom: 1px solid #fca311;
+        padding-left: 20px;
+    }

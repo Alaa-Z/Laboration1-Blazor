@@ -1,0 +1,48 @@
+﻿header {
+    height: 20vh;
+    border-bottom: 2px solid #fca311;
+    width: 100%;
+    position: relative !important;
+}
+
+.logo{
+    position: absolute !important;
+    top: 40px !important;
+    left: 40px !important;
+}
+
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin-inline: auto;
+    display: grid;
+    grid-template-columns: 25% 72%;
+    grid-gap: 3%;
+    margin-top: 30px;
+    height: 140vh;
+}
+
+.aside {
+    border: 2px solid #fca311;
+}
+
+.content {
+    border: 2px solid #fca311;
+}
+
+footer {
+    height: 15vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #fca311;
+    max-width: 1200px;
+    width: 95%;
+    margin: auto;
+    margin-top: 30px;
+}
+
+footer a {
+    text-decoration: underline;
+}

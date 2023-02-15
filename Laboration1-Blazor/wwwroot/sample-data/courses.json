@@ -1,0 +1,52 @@
+﻿[
+  {
+    "kurskod":      "DT057G",
+    "namn":         "Webbutveckling I",
+    "progression":  "A"
+  },
+  {
+    "kurskod":      "DT084G",
+    "namn":         "Introduktion till programmering i JavaScript",
+    "progression":  "A"
+  },
+  {
+    "kurskod":      "DT068G",
+    "namn":         "Webbanvändbarhet",
+    "progression":  "B"
+  },
+  {
+    "kurskod":      "DT163G",
+    "namn":         "Digital bildbehandling för webb",
+    "progression":  "A"
+  },
+  {
+    "kurskod":      "DT093G",
+    "namn":         "Webbutveckling II",
+    "progression":  "B"
+  },
+  {
+    "kurskod":      "DT003G",
+    "namn":         "Databaser",
+    "progression":  "A"
+  },
+  {
+    "kurskod":      "DT173G",
+    "namn":         "Webbutveckling III",
+    "progression":  "B"
+  },
+  {
+    "kurskod":      "DT197G",
+    "namn":         "Webbdesign för CMS",
+    "progression":  "B"
+  },
+  {
+    "kurskod":      "DT193G",
+    "namn":         "Fullstack-utveckling med ramverk",
+    "progression":  "B"
+  },
+  {
+    "kurskod":      "IK060G",
+    "namn":         "Projektledning",
+    "progression":  "A"
+  }
+]

@@ -1,0 +1,58 @@
+﻿@using System.Timers
+ 
+@code
+{
+
+    // Declare new timer
+    private Timer timer;
+
+    // variables 
+    double hour, minutes, seconds;
+
+    double secondsDegrees, minutesDegrees, hourDegrees;
+
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+
+        // Initialize the timer
+        timer = new Timer();
+
+        // Excute the function every 1000 ms
+        timer.Interval = 1000;
+
+        // event hamdler for the time from the start of an event to its finish
+        timer.Elapsed += UpdateTime;
+
+        //Start the timer
+        timer.Enabled = true;
+    }
+
+    void UpdateTime(object? sender, ElapsedEventArgs e)
+    {
+        // Current time
+        var time = DateTime.Now;
+
+        // Return minutes, seconds, hour
+        seconds = time.Second;
+        minutes = time.Minute;
+        hour = time.Hour;
+
+        // Calculate rotation
+        secondsDegrees = seconds * 6;
+        minutesDegrees = minutes * 6;
+        hourDegrees = hour * 30 + minutes / 2;
+
+        // Notifies that state has changed
+        StateHasChanged();
+    }
+}
+
+
+<div class="clock-wrapper">
+    <div class="clock">
+        <div class="hour-hand" style="transform:rotate(@(hourDegrees)deg);"></div>
+        <div class="min-hand" style="transform:rotate(@(minutesDegrees)deg);"></div>
+        <div class="second-hand" style="transform:rotate(@(secondsDegrees)deg);"></div>
+    </div>
+</div>

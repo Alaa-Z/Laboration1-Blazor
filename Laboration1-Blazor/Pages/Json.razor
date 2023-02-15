@@ -1,0 +1,46 @@
+﻿@page "/json"
+@inject HttpClient Http
+
+<PageTitle>Json</PageTitle>
+
+<div class="home">
+
+<h1>Json Page</h1>
+
+<h2>My courses:</h2>
+
+
+    @if (courses == null)
+    {
+        <p><b>No Data! Try again! </b></p>
+    }
+    else
+    {
+    <ol>
+        @foreach (var course in courses)
+    {
+        <li>@course.namn (@course.progression) <br> @course.kurskod  </li>
+    }
+    </ol>
+
+}
+</div>
+
+@code {
+    private CourseList[]? courses;
+
+    // Fetch Courses from json file
+    protected override async Task OnInitializedAsync()
+    {
+        courses = await Http.GetFromJsonAsync<CourseList[]>("sample-data/courses.json");
+    }
+
+    public class CourseList
+    {
+        public string? kurskod { get; set; }
+        public string? namn { get; set; }
+        public string? progression { get; set; }
+    }
+
+}
+

@@ -1,0 +1,61 @@
+﻿@page "/convert"
+
+<PageTitle>Convert</PageTitle>
+
+@code {
+
+    // Convert meters to feet
+    private double meterValue;
+    private double feetValue;
+    private void meterToFeet()
+    {
+        feetValue = Math.Round(3.2808399 * meterValue, 2);
+    }
+
+    // Convert kilometer/h to miles/h
+    private double kmPerhValue;
+    private double milesPerhValue;
+    private void kmPerhToMilesPerhour()
+    {
+        milesPerhValue = (int)(0.6214 * kmPerhValue);
+    }
+
+}
+
+<div class="home">
+
+    <div>
+        <h1>Conversion Page</h1>
+
+        <h2>Meters to Feet</h2>
+
+        <form @onsubmit=meterToFeet>
+            <label for="meter">Meter:</label>
+            <input type="number" id="meter" @bind="meterValue" />
+            <button type="button">Convert</button>
+        </form>
+
+        <p><strong> @meterValue meter  =  @feetValue feet</strong></p>
+
+        <br />
+
+        <h2> Km/h to miles/hour</h2>
+        <form @onsubmit=kmPerhToMilesPerhour>
+            <label for="km/h">km/h:</label>
+            <input type="number" id="km/h" @bind="kmPerhValue" />
+            <button type="button">Convert</button>
+        </form>
+
+        <p><strong> @kmPerhValue km/h  =  @milesPerhValue miles/h</strong></p>
+
+       
+    </div>
+
+
+</div>
+
+
+
+
+
+
