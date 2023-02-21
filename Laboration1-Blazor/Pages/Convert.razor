@@ -28,11 +28,10 @@
         <h1>Conversion Page</h1>
 
         <h2>Meters to Feet</h2>
-
         <form @onsubmit=meterToFeet>
             <label for="meter">Meter:</label>
             <input type="number" id="meter" @bind="meterValue" />
-            <button type="button">Convert</button>
+            <button type="button" @onclick="meterToFeet">Convert</button>
         </form>
 
         <p><strong> @meterValue meter  =  @feetValue feet</strong></p>
@@ -43,7 +42,7 @@
         <form @onsubmit=kmPerhToMilesPerhour>
             <label for="km/h">km/h:</label>
             <input type="number" id="km/h" @bind="kmPerhValue" />
-            <button type="button">Convert</button>
+            <button type="button" @onclick="kmPerhToMilesPerhour">Convert</button>
         </form>
 
         <p><strong> @kmPerhValue km/h  =  @milesPerhValue miles/h</strong></p>
